@@ -12,11 +12,20 @@ m5 = Movie.new('Sherlock Holmes')
 
 s1 = Show.new('Game of Thrones')
 s2 = Show.new('Sherlock Holmes')
+s1e1 = Episode.new('Game of Thrones: EP1')
+s1e2 = Episode.new('Game of Thrones: EP2')
+s2e1 = Episode.new('Sherlock Holmes: EP1')
+s2e2 = Episode.new('Sherlock Holmes: EP2')
+s1.add_episode(s1e1)
+s1.add_episode(s1e2)
+s2.add_episode(s2e1)
+s2.add_episode(s2e2)
 
 c1 = Character.new('R2-D2')
 c2 = Character.new('C3PO')
 c3 = Character.new('Dr. Watson')
 c4 = Character.new('Hodor')
+c5 = Character.new('Arya Stark')
 
 a1 = Actor.new('A little rubbish bin')
 a1.plays(c1)
@@ -30,6 +39,9 @@ a3.plays(c3)
 a4 = Actor.new('Kristian Nairn')
 a4.plays(c4)
 
+a5 = Actor.new('Maisie Williams')
+a5.plays(c5)
+
 # DROIDS
 Role.new(m1, c1)
 Role.new(m2, c1)
@@ -41,10 +53,15 @@ Role.new(m4, c2)
 
 # HOLMES
 Role.new(m5, c3)
-Role.new(s2, c3)
+Role.new(s2e1, c3)
+Role.new(s2e2, c3)
 
 # HODOR
-Role.new(s1, c4)
+Role.new(s1e1, c4)
+Role.new(s1e2, c4)
+
+# ARYA
+Role.new(s1e2, c5)
 
 # MOST ACTORS
 m6 = Movie.new('Dr. Jekyll and Mr. Hyde')

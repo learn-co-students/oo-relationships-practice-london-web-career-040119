@@ -11,6 +11,10 @@ class VisualProduct
     Role.all.select { |role| role.visualproduct == self }
   end
 
+  def characters
+    roles.map(&:character).uniq
+  end
+
   def actors
     roles.map(&:character).map(&:actors).uniq.flatten
   end
