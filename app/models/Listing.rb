@@ -13,7 +13,7 @@ class Listing
   end
 
   def self.find_all_by_city(city)
-    all.select { |guest| guest.city == city }
+    all.select { |listing| listing.city == city }
   end
 
   def trips
