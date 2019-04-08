@@ -1,3 +1,9 @@
+require_relative '../config/environment.rb'
+
+def reload
+  load 'config/environment.rb'
+end
+
 g1 = Guest.new('aaaa')
 g2 = Guest.new('bbbb')
 g3 = Guest.new('cccc')
@@ -13,5 +19,4 @@ t4 = Trip.new(g2, l2)
 t5 = Trip.new(g3, l2)
 t6 = Trip.new(g2, l2)
 
-binding.pry
-'eof'
+Pry.start
