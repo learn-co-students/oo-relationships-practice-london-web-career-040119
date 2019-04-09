@@ -1,9 +1,11 @@
 class Character
   attr_reader :name
+  attr_accessor :actor
   @@all = []
 
   def initialize(name)
     @name = name
+    @actor = nil
     @@all << self
   end
 
@@ -13,10 +15,6 @@ class Character
 
   def number_of_apperances
     apperances.count
-  end
-
-  def actors
-    Actor.all.select { |actor| actor.characters.include?(self) }
   end
 
   def self.most_appearances

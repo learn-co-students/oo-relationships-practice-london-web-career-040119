@@ -16,7 +16,7 @@ class VisualProduct
   end
 
   def actors
-    roles.map(&:character).map(&:actors).uniq.flatten
+    roles.map(&:character).map(&:actor).uniq.flatten
   end
 
   def number_of_actors

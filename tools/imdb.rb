@@ -12,35 +12,30 @@ m5 = Movie.new('Sherlock Holmes')
 
 s1 = Show.new('Game of Thrones')
 s2 = Show.new('Sherlock Holmes')
-s1e1 = Episode.new('Game of Thrones: EP1')
-s1e2 = Episode.new('Game of Thrones: EP2')
-s2e1 = Episode.new('Sherlock Holmes: EP1')
-s2e2 = Episode.new('Sherlock Holmes: EP2')
-s1.add_episode(s1e1)
-s1.add_episode(s1e2)
-s2.add_episode(s2e1)
-s2.add_episode(s2e2)
+s1e1 = Episode.new('Game of Thrones: EP1', s1)
+s1e2 = Episode.new('Game of Thrones: EP2', s1)
+s2e1 = Episode.new('Sherlock Holmes: EP1', s2)
+s2e2 = Episode.new('Sherlock Holmes: EP2', s2)
 
 c1 = Character.new('R2-D2')
 c2 = Character.new('C3PO')
 c3 = Character.new('Dr. Watson')
 c4 = Character.new('Hodor')
 c5 = Character.new('Arya Stark')
+c6 = Character.new('Leia Organa')
 
 a1 = Actor.new('A little rubbish bin')
-a1.plays(c1)
-
 a2 = Actor.new('Golden Robot')
-a2.plays(c2)
-
 a3 = Actor.new('Martin Freeman')
-a3.plays(c3)
-
 a4 = Actor.new('Kristian Nairn')
-a4.plays(c4)
-
 a5 = Actor.new('Maisie Williams')
-a5.plays(c5)
+a6 = Actor.new('Carrie Fisher')
+c1.actor = a1
+c2.actor = a2
+c3.actor = a3
+c4.actor = a4
+c5.actor = a5
+c6.actor = a6
 
 # DROIDS
 Role.new(m1, c1)
@@ -50,6 +45,9 @@ Role.new(m1, c2)
 Role.new(m2, c2)
 Role.new(m3, c2)
 Role.new(m4, c2)
+
+# LEIA
+Role.new(m2, c6)
 
 # HOLMES
 Role.new(m5, c3)
@@ -69,9 +67,9 @@ jekyll = Character.new('Dr. Jekyll')
 hyde = Character.new('Mr. Hyde')
 lanyon = Character.new('Dr. Charles Lanyon')
 caine = Actor.new('Michael Caine')
-caine.plays(hyde)
-caine.plays(jekyll)
-caine.plays(lanyon)
+hyde.actor = caine
+jekyll.actor = caine
+lanyon.actor = caine
 Role.new(m6, hyde)
 Role.new(m6, jekyll)
 Role.new(m6, lanyon)
