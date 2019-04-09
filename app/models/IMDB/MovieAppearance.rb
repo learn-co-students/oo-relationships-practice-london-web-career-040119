@@ -1,0 +1,3 @@
+class MovieAppearance
+
+end
