@@ -6,6 +6,7 @@ end
 
 p1 = Passenger.new
 p2 = Passenger.new
+p3 = Passenger.new
 
 d1 = Driver.new
 d2 = Driver.new

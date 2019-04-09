@@ -17,6 +17,8 @@ class Passenger
   end
 
   def total_distance
+    return 0 if rides.empty?
+
     rides.map(&:distance).inject(:+)
   end
 
