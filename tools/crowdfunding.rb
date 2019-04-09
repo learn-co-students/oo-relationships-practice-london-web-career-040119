@@ -26,6 +26,7 @@ pl2 = Pledge.new(u3, p2, 30)
 pl3 = Pledge.new(u2, p1, 30)
 pl4 = Pledge.new(u2, p1, 50)
 pl5 = Pledge.new(u4, p1, 10)
+pl6 = Pledge.new(u4, p1, 10)
 
 (1..100).each do |_idx|
   Pledge.new(u1, p1, 10)

@@ -27,7 +27,7 @@ class User
 
   def self.multi_pledger
     # returns all users who have pledged to multiple projects
-    all.select { |user| user.num_of_pledges > 1 }
+    all.select { |user| user.pledges.map(&:project).uniq.length > 1 }
   end
 
   def self.project_creator
