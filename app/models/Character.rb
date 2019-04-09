@@ -18,7 +18,7 @@ class Character
   end
 
   def self.most_appearances
-    Role.all.map(&:character).max_by(&:number_of_apperances)
+    all.max_by(&:number_of_apperances)
   end
 
   def self.all
