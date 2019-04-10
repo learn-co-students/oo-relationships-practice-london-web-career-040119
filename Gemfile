@@ -2,5 +2,5 @@
 
 source "https://rubygems.org"
 
-gem 'pry-byebug'
-gem 'require_all'
+gem 'pry-byebug' # 
+gem 'require_all' # give access to all folders within app folder
