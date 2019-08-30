@@ -21,10 +21,10 @@ Write out the relationships using has_many, belongs_to and has_many_through. Wri
 
 #### Show
 - #on_the_big_screen
-  - should return TV shows that share the same name as a movie
+  - should return a boolean depending on whether there is a match or not.
 
 #### Character
-- #most_appearances
+- .most_appearances
   - should return which character of film/television appears in the most films or tv shows
 
 #### Actor
